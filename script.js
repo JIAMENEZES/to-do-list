@@ -20,8 +20,7 @@ function addTask() {
 }
 listContainer.addEventListener("click",function(e){
     if(e.target.tagName==="LI"){
-        let a=e.target;
-        a.classlist.add("checked");
+        e.target.classList.toggle("checked");
         saveData();
 
     }
@@ -36,7 +35,7 @@ function saveData(){
 
 }
 function showTask(){
-    listContainer.innerHTML=localstorage.getItem("data");
+    listContainer.innerHTML=localStorage.getItem("data");
 
 }
 showTask();
