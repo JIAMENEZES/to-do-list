@@ -6,25 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List App-Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for the iframe container */
+        .game-container {
+            position: relative;
+            width: 600px; /* Adjust width as needed */
+            height: 400px; /* Adjust height as needed */
+            margin: 20px auto; /* Adjust margin as needed */
+        }
+
+        /* Optional styles for the embedded iframe */
+        iframe {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width if desired */
+    height: 400px; /* Adjust the height as needed */
+    display: block;
+    margin: 0 auto; /* Center the iframe horizontally */
+    border: none; /* Remove iframe border */
+}
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png">
-            </h2>
+            <h2>To-Do List <img src="images/icon.png"></h2>
             <div class="row">
                 <input type="text" id="input-box" placeholder="Add your text">
                 <button onclick="addTask()">Add</button>
-
             </div>
             <ul id="list-container">
-               <!--- <li class="checked">Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>
-            </ul>--->
+                <!-- Tasks will be dynamically added here -->
+            </ul>
         </div>
+
+        <!-- embeds the pong game using an iframe -->
+        <iframe src="pong.html" title="pong" width="600" height="400" frameborder="0"></iframe>
     </div>
+
     <script src="script.js"></script>
 </body>
 
